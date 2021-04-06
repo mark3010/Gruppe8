@@ -16,18 +16,10 @@ public class Search {
         list.add("banana");
         list.add("monke");
 
-        int test = searchArrayListForString(list,"doot");
+        int test = searchArrayListForString(list,"monke");
         System.out.println(test);
     }
     public static int searchArrayListForString(ArrayList<String> list, String line) throws NullPointerException {
-        int stringPos = -1;
-        if (list.contains(line)) {
-            for (String i : list) {
-                if (line.equals(i)) {
-                    stringPos = list.indexOf(i);
-                }
-            }
-        }
-        return stringPos;
+        return list.indexOf(line);
     }
 }
