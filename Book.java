@@ -2,8 +2,6 @@
  Author of Book.java, @Malthe Gram
  */
 
-import java.util.Objects;
-
 public class Book {
     private int ISBN;
     private int releaseYear;
@@ -32,6 +30,5 @@ public class Book {
     public String toString() {
         return "Book data: " + "ISBN = " + ISBN + ", releaseYear = " + releaseYear + ", title = " + title;
     }
-
 
 }

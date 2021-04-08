@@ -2,7 +2,6 @@
  Author of Library.java, @Malthe Gram
  */
 
-import javax.crypto.Mac;
 import java.util.ArrayList;
 
 public class Library {
@@ -35,37 +34,15 @@ public class Library {
 
     /*
 
-    Flawed idea TBC:
-
-    public static boolean isISBNMatching(Book bookHere, ArrayList<Book> list) {
-        if (list.contains(bookHere.getISBN())){
-            System.out.println("Library contains \"" + bookHere.getTitle() + "\"with given ISBN: " +bookHere.getISBN());
+    }
+    // Mangler at færdiggøres
+    public boolean isISBNMatching(Book bookHere, ArrayList<Book> list) {
+        if ((list.contains(bookHere.getISBN() = bookHere.getISBN())){
             return true;
-
-       } else
-        System.out.println("Library does not contain \"" + bookHere.getTitle() + "\" with given ISBN: " +bookHere.getISBN());
+        }
             return false;
         }
-
-     */
-
-    // Write a method in the library class, which takes a Book object as parameter and returns true,
-    // if the list contains a book object with the same ISBN
-    public static boolean isISBNMatching(Book bookHere, ArrayList<Book> list) {
-        for (Book book : list) {
-            if (book.equals(bookHere)) {
-                System.out.println("Library contains \"" + bookHere.getTitle() + "\" with given ISBN: " + bookHere.getISBN());
-                return true;
-            }
-        }
-                System.out.println("Library does not contain \"" + bookHere.getTitle() + "\" with given ISBN: " +bookHere.getISBN());
-                return false;
-
-    }
-
-    public static void printProblemDescription(){
-        System.out.println(description);
-    }
+}
 
 
 }
