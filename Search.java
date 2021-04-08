@@ -1,3 +1,4 @@
+package Gruppe8;
 
 import java.io.FileNotFoundException;
 import java.util.Scanner;
