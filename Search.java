@@ -1,5 +1,4 @@
 package Gruppe8;
-import Files.Student;
 
 import java.io.FileNotFoundException;
 import java.util.Scanner;

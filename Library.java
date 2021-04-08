@@ -31,6 +31,24 @@ public class Library {
         System.out.println(isISBNMatching(MacMasterRaceVolumeFour, bookList));
     }
 
+    public static boolean isISBNMatching(Book bookHere, ArrayList<Book> list) {
+        for (Book book : list) {
+            if (book.equals(bookHere)) {
+                System.out.println("Library contains \"" + bookHere.getTitle() + "\" with given ISBN: " + bookHere.getISBN());
+                return true;
+            }
+        }
+        System.out.println("Library does not contain \"" + bookHere.getTitle() + "\" with given ISBN: " + bookHere.getISBN());
+        return false;
+
+    }
+
+    public static void printProblemDescription(){
+        System.out.println(description);
+    }
+
+
+}
 
     /*
 
@@ -45,5 +63,5 @@ public class Library {
 }
 
 
-}
+}*/
 
