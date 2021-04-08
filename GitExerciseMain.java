@@ -28,7 +28,7 @@ public class GitExerciseMain {
         searchList.add("banana");
         searchList.add("monke");
 
-        int searchTest = Gruppe8.Search.searchArrayListForString(searchList,"monke");
+        int searchTest = Search.searchArrayListForString(searchList,"monke");
         System.out.println(searchTest);
     }
 }
