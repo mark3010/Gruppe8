@@ -10,15 +10,6 @@ public class Search {
             "hvis strengen findes i arrayet og–1hvis strengen ikke findes i arrayet.Lav en alternativ fejlhåndtering, " +
             "hvis strengen ikke findes i arrayet, hvor du i stedet kasterenexception";
 
-    public static void main(String[] args) throws Exception {
-        ArrayList<String> list = new ArrayList<String>();
-        list.add("banana");
-        list.add("monke");
-
-        int test = searchArrayListForString(list,"monke");
-        System.out.println(test);
-    }
-
     public static int searchArrayListForString(ArrayList<String> list, String line) throws Exception {
         if(list.indexOf(line) == -1) {
             throw new Exception();

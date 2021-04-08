@@ -20,11 +20,16 @@ public class GitExerciseMain {
         bookList.add(MacMasterRaceVolumeThree);
 
         System.out.println(Library.isISBNMatching(MacMasterRaceVolumeOne,bookList));
-        
-        
+
         SquarePrinter2000.main(args);
 
+        //Search
+        ArrayList<String> searchList = new ArrayList<String>();
+        searchList.add("banana");
+        searchList.add("monke");
 
+        int searchTest = searchArrayListForString(searchList,"monke");
+        System.out.println(searchTest);
     }
 }
 
