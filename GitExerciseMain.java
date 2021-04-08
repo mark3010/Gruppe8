@@ -20,6 +20,9 @@ public class GitExerciseMain {
         bookList.add(MacMasterRaceVolumeThree);
 
         System.out.println(Library.isISBNMatching(MacMasterRaceVolumeOne,bookList));
+        
+        
+        SquarePrinter2000.main();
 
 
     }
