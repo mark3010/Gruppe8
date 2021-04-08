@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class GitExerciseMain {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         StringSort sort = new StringSort();
         sort.runStringSort();
         System.out.println();
@@ -28,7 +28,7 @@ public class GitExerciseMain {
         searchList.add("banana");
         searchList.add("monke");
 
-        int searchTest = searchArrayListForString(searchList,"monke");
+        int searchTest = Gruppe8.Search.searchArrayListForString(searchList,"monke");
         System.out.println(searchTest);
     }
 }
