@@ -22,7 +22,7 @@ public class GitExerciseMain {
         System.out.println(Library.isISBNMatching(MacMasterRaceVolumeOne,bookList));
         
         
-        SquarePrinter2000.main();
+        SquarePrinter2000.main(args);
 
 
     }
