@@ -1,6 +1,13 @@
 import java.util.*;
 
 public class StringSort {
+    private final String problemDescription = ">>>>>>> OPGAVEN ER LAVET AF HE<<<<<<<\n" +
+            "Sortering\n" +
+            "Skriven metode, der indlæser 5 tekststrenge fra tastaturet\n" +
+            "og udskriver dem på skærmen i alfabetisk faldende orden på skærmen.\n" +
+            "Hvis der indlæses:abekat\nmusefælde\nananas\nslut\nsolskin\n" +
+            "skal der udskrives følgende på skærmen:\n" +
+            "solskin\nslut\nmusefælde\nananas\nabekat\n";
 
     public void runStringSort() {
         Scanner sc = new Scanner(System.in);
@@ -17,39 +24,34 @@ public class StringSort {
     }
 
     private Collection<String> getUserDefinedStringList(Scanner sc) {
-        Collection<String> words = new TreeSet<>();
+        Collection<String> words = new TreeSet<>(); // new elements are added in sorted order
 
-        // when input is q, immediately exit and print result, do not add q to the list
+        var flag = true;
 
-        var word = "";
-
-        while(!word.equals("q")) {
-            System.out.println("write a new word and press enter, or q to exit");
-
+        while(flag) {
+            var word = "";
+            promptForInput();
             word = "" + sc.nextLine().toLowerCase();
-
-
-            if(word.isEmpty()) {
-                askForProperInputString();
-
+            if(word.equals("q")) {
+                flag = false;
             } else {
-                words.add(word);
+                if(word.isEmpty()) {
+                    break;
+                } else {
+                    words.add(word);
+                }
             }
         }
         return words;
     }
 
-    private void askForProperInputString() {
-        System.out.println("that was not a word, try again");
+    private void promptForInput() {
+        System.out.println("write a new word and press enter, or q to exit");
     }
 
+
     private void printProblemDescription() {
-        System.out.println("Sortering\n" +
-                "Skriven metode, der indlæser 5 tekststrenge fra tastaturet\n" +
-                "og udskriver dem på skærmen i alfabetisk faldende orden på skærmen.\n" +
-                "Hvis der indlæses:abekat\nmusefælde\nananas\nslut\nsolskin\n" +
-                "skal der udskrives følgende på skærmen:\n" +
-                "solskin\nslut\nmusefælde\nananas\nabekat\n");
+        System.out.println(problemDescription);
     }
 }
 
