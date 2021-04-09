@@ -1,4 +1,6 @@
+import javax.crypto.Mac;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class GitExerciseMain {
     public static void main(String[] args) throws Exception {
@@ -8,6 +10,7 @@ public class GitExerciseMain {
 
         // Library Assignment
         Library.printProblemDescription();
+
 
         Book MacMasterRaceVolumeOne = new Book(252510, 2019, "MacMasterRaceVolumeOne");
         Book MacMasterRaceVolumeTwo = new Book(252511, 2020, "MacMasterRaceVolumeTwo");
@@ -19,8 +22,16 @@ public class GitExerciseMain {
         bookList.add(MacMasterRaceVolumeTwo);
         bookList.add(MacMasterRaceVolumeThree);
 
-        System.out.println(Library.isISBNMatching(MacMasterRaceVolumeOne,bookList));
 
+        System.out.println(Library.isISBNMatching(MacMasterRaceVolumeFour,bookList));
+        System.out.println(Library.isTitleMatching(MacMasterRaceVolumeOne,bookList));
+        System.out.println("Please search the library by title for a specific book ");
+
+        Scanner sc = new Scanner(System.in);
+        String title = sc.nextLine();
+        Library.isTheBookInTheLibrary(title, bookList);
+
+        // Square Printer Assignemnt
         SquarePrinter2000.main(args);
 
         //Search

@@ -2,55 +2,86 @@
  Author of Library.java, @Malthe Gram
  */
 
+
 import java.util.ArrayList;
+import java.util.Scanner;
+
 
 public class Library {
-    private static String description =
-            "Skriv en klasse kaldet Bog, der indeholder ISBN-nummer, titel og udgivelsesår.\n" +
-                    "Skriv flg. metoder: Constructor, Getters og setters, toString.\n" +
-                    "Skriv en klasse kaldet \"Bibliotek\", der indeholder en liste af Bog objekter\n" +
-                    "Indsæt tre forskellige bøgeri Biblioteket. Skriv en metode i Bibliotek klassen,\n" +
-                    "som tager et Bog objekt som parameter, og returnerer true, hvis listen indeholderet Bog objekt med samme ISBN";
+    private final static String description =
+            """
+                    Skriv en klasse kaldet Bog, der indeholder ISBN-nummer, titel og udgivelsesår.
+                    Skriv flg. metoder: Constructor, Getters og setters, toString.
+                    Skriv en klasse kaldet "Bibliotek", der indeholder en liste af Bog objekter
+                    Indsæt tre forskellige bøgeri Biblioteket. Skriv en metode i Bibliotek klassen,
+                    som tager et Bog objekt som parameter, og returnerer true, hvis listen indeholderet Bog objekt med samme ISBN""";
 
-    public static void main(String[] args) {
-
-
-        // System.out.println(bookList);
-
-        // System.out.println(MacMasterRaceVolumeOne.getTitle() + " has ISBN: " + MacMasterRaceVolumeOne.getISBN());
-    }
+    public static void printProblemDescription () {
+            System.out.println(description);
+        }
 
     public static boolean isISBNMatching(Book bookHere, ArrayList<Book> list) {
+        // For each loop: Goes through each book in the list
         for (Book book : list) {
-            if (book.equals(bookHere)) {
-                System.out.println("Library contains \"" + bookHere.getTitle() + "\" with given ISBN: " + bookHere.getISBN());
+            // Using == since we're comparing ISBN, which is an int, which is a primitive data type.
+            if (book.getISBN() == (bookHere.getISBN())) {
+                System.out.println("Searching by ISBN, library contains \"" + bookHere.getTitle() + "\" with given ISBN: " + bookHere.getISBN());
                 return true;
             }
         }
-        System.out.println("Library does not contain \"" + bookHere.getTitle() + "\" with given ISBN: " + bookHere.getISBN());
+        System.out.println("Searching by ISBN, library does not contain \"" + bookHere.getTitle() + "\" with given ISBN: " + bookHere.getISBN());
         return false;
 
     }
 
-    public static void printProblemDescription(){
-        System.out.println(description);
+    public static boolean isTitleMatching(Book bookHere, ArrayList<Book> list) {
+        // For each loop: Goes through each book in the list
+        for (Book book : list) {
+            // Using .equals since we're comparing titles, which is a String, which is an Object.
+            if (book.getTitle().equals(bookHere.getTitle())) {
+                System.out.println("Searching by title, library contains \"" + bookHere.getTitle() + "\" with given ISBN: " + bookHere.getISBN());
+                return true;
+            }
+        }
+        System.out.println("Searching by title, library does not contain \"" + bookHere.getTitle() + "\" with given ISBN: " + bookHere.getISBN());
+        return false;
+
     }
+
+    public static boolean isTheBookInTheLibrary(String titleInput, ArrayList<Book> list) {
+
+        for (Book book : list) {
+
+            if (titleInput.equals(book.getTitle())) {
+                System.out.println("Searching by user input: Library contains \"" + titleInput + "\" with given ISBN: " + book.getISBN());
+                return true;
+            } else {
+                System.out.println("Searching by user input: Library does not contains \"" + titleInput + "\"");
+                return false;
+
+            }
+        }
+                 return false;
+
+    }
+
+  /*  public static void addBookToLibrary(String titleInput, ArrayList<String> list) {
+            Scanner yesNo = new Scanner(System.in);
+
+            System.out.println("Would you like to add \"" + titleInput + "\" to the library?");
+            yesNo.nextLine();
+            if (titleInput.equals("Yes") || titleInput.equals("yes")) {
+                list.add(titleInput);
+
+            } else if (titleInput.equals("No") || titleInput.equals("no"))
+                System.out.println("Terminating program");
+        }
+
+   */
+
 
 
 }
 
-    /*
 
-    }
-    // Mangler at færdiggøres
-    public boolean isISBNMatching(Book bookHere, ArrayList<Book> list) {
-        if ((list.contains(bookHere.getISBN() = bookHere.getISBN())){
-            return true;
-        }
-            return false;
-        }
-}
-
-
-}*/
 
