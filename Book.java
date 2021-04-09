@@ -17,6 +17,18 @@ public class Book {
         return ISBN;
     }
 
+    public void setISBN(int ISBN) {
+        this.ISBN = ISBN;
+    }
+
+    public void setReleaseYear(int releaseYear) {
+        this.releaseYear = releaseYear;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     public int getReleaseYear(){
         return releaseYear;
     }
